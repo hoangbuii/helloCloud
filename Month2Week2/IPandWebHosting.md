@@ -22,6 +22,7 @@
     - **Giao tiếp mạng nội bộ:** Địa chỉ IP cục bộ được sử dụng cho các thiết bị trong mạng riêng để giao tiếp với nhau. Chúng cho phép các thiết bị như máy tính, điện thoại thông minh, máy in và máy chủ trao đổi dữ liệu và thông tin trong ranh giới của mạng cục bộ.
     - **Subnnetting(mạng con):** Địa chỉ IP cục bộ thường được chia thành các mạng con nhỏ hơn để chứa các mạng lớn hơn. Mạng con cho phép quản trị viên mạng tổ chức và quản lý địa chỉ IP hiệu quả hơn trong mạng cục bộ bằng cách nhóm các thiết bị thành các mạng con hợp lý.
     - **Phạm vi mạng cục bộ:** Địa chỉ IP cục bộ chỉ hợp lệ trong mạng riêng cụ thể mà chúng được chỉ định. Chúng không thể truy cập hoặc định tuyến được từ bên ngoài mạng cục bộ. Điều này cung cấp một mức độ bảo mật và cách ly cho các thiết bị trong mạng riêng, vì chúng được bảo vệ khỏi việc tiếp xúc trực tiếp với internet.
+ 
 ![noimg](https://github.com/hoangbuii/helloCloud/blob/main/Month2Week2/public-ip-address-vs-private-ip-address.jpg)
 ### 1.3. IP ảo (Virtual IP)
 Trong mạng máy tính, IP ảo (VIP) đề cập đến một địa chỉ IP không được liên kết với một thiết bị hoặc interface vật lý cụ thể. Thay vào đó, nó thường được gán cho một tài nguyên ảo, chẳng hạn như máy ảo (VM), bộ cân bằng tải hoặc cụm có tính sẵn sàng cao.
