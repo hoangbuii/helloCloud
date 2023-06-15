@@ -138,3 +138,43 @@ HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Terminal Server\WinStations\
 
 ![noimg](https://github.com/hoangbuii/helloCloud/blob/main/Month2Week2/chpo.png)
 - Khởi động lại máy tính hoặc dịch vụ Remote Desktop để các thay đổi có hiệu lực.
+
+## 5. SSH đến một server sử dụng MobaXterm
+Trong ví dụ này, chúng ta sẽ thực hiện SSH đến một SSH server sử dụng MobaXterm:
+### 5.1. Chuẩn bị
+- SSH server: ở đây chúng ta sử dụng một instance EC2 được cung cấp bởi AWS, instance được cài đặt sẵn SSH server và mở sẵn sàng kết nối:
+```bash
+ubuntu@ip-172-31-7-151:~$ sudo service ssh status
+● ssh.service - OpenBSD Secure Shell server
+     Loaded: loaded (/lib/systemd/system/ssh.service; enabled; vendor preset: enabled)
+    Drop-In: /usr/lib/systemd/system/ssh.service.d
+             └─ec2-instance-connect.conf
+     Active: active (running) since Thu 2023-06-15 02:22:38 UTC; 15min ago
+       Docs: man:sshd(8)
+             man:sshd_config(5)
+   Main PID: 656 (sshd)
+      Tasks: 1 (limit: 1141)
+     Memory: 8.7M
+        CPU: 91ms
+     CGroup: /system.slice/ssh.service
+             └─656 "sshd: /usr/sbin/sshd -D -o AuthorizedKeysCommand /usr/share/ec2-instance-connect/eic_run_authorized_keys %u %f -o AuthorizedKeysCommandUser ec2-instance-connect [listener] 0 of 10-100 s>
+```
+- Khi tạo instance EC2, ta tạo sẵn keypair và lưu vào SSH client
+- Cài MobaXterm trên SSH client và sẵn sàng kết nối đến server
+
+![noimg](https://github.com/hoangbuii/helloCloud/blob/main/Month2Week2/mthome.png)
+
+### 5.2. Thực hiện kết nối
+- Lấy thông tin về SSH server: các thông tin bao gồm hostname, username và keypair:
+![noimg](https://github.com/hoangbuii/helloCloud/blob/main/Month2Week2/infec2.png)
+- Thực hiện kết nối:
+
+    - Mở MobaXterm, Chọn **Sessions/New Session**
+    - Điền các thông tin về hostname và username
+    - Tích vào ô **Use private key** và chọn keypair đã lưu
+
+    ![noimg](https://github.com/hoangbuii/helloCloud/blob/main/Month2Week2/esco.png)
+
+- Sau khi kết nối thành công, bạn có thể truy cập vào SSH server
+
+![noimg](https://github.com/hoangbuii/helloCloud/blob/main/Month2Week2/enco.png)
