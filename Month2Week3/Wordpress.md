@@ -40,8 +40,8 @@ sudo systemctl restart apache2
     ```
     - Cài đặt các quyền cho file và thư mục
     ```bash
-    sudo chown -R www-data:www-data /var/www/html/
-    sudo chmod -R 755 /var/www/html/
+    sudo chown -R www-data:www-data /var/www/html/wordpress
+    sudo chmod -R 755 /var/www/html/wordpress
     ```
 - Cài đặt Database cho Wordpress:
     - Cài đặt MySQL (hoặc MariaDB):
@@ -66,7 +66,7 @@ sudo systemctl restart apache2
     ```
     - Sửa file cấu hình Wordpress:
     ```bash
-    cd /var/www/html/
+    cd /var/www/html/wordpress
     sudo cp wp-config-sample.php wp-config.php
     sudo nano wp-config.php
     ```
@@ -154,8 +154,8 @@ sudo apt-get install php-fpm php-mysql php-curl php-gd php-mbstring php-xml php-
 - Cấu hình Wordpress
     - Cài đặt các quyền cho file và thư mục
     ```bash
-    sudo chown -R www-data:www-data /var/www/html/
-    sudo chmod -R 755 /var/www/html/
+    sudo chown -R www-data:www-data /var/www/html/wordpress
+    sudo chmod -R 755 /var/www/html/wordpress
     ```
     - Cài đặt MySQL(hoặc MariaDB) và thêm database cho Wordpress
     ```sql
@@ -166,7 +166,7 @@ sudo apt-get install php-fpm php-mysql php-curl php-gd php-mbstring php-xml php-
     ```
     - Sửa file cấu hình Wordpress:
     ```bash
-    cd /var/www/html/
+    cd /var/www/html/wordpress
     sudo cp wp-config-sample.php wp-config.php
     sudo nano wp-config.php
     ```
