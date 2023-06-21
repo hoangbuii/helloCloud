@@ -22,7 +22,7 @@ sudo systemctl enable apache2
 ```
 - Cài đặt PHP và những extension cần thiết(ở đây sử dụng phiên bản mới nhất là php8.1)
 ```bash
-sudo apt-get install php-fpm php-mysql php-curl php-gd php-mbstring php-xml php-xmlrpc
+sudo apt-get install php libapache2-mod-php php-mysql php-curl php-gd php-mbstring php-xml php-xmlrpc
 ``` 
 - Khởi động lại Apache để tải lại các module của PHP
 ```bash
