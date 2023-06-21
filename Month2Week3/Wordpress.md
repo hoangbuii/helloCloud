@@ -11,18 +11,18 @@ LAMP là từ viết tắt của Linux, Apache, MySQL và PHP/Perl/Python. Nó �
 # 2. Cài đặt Wordpress sử dụng Apache trên Ubuntu
 - Cập nhật hệ thống
 ```bash
-sudo apt update
-sudo apt upgrade
+sudo apt-get update
+sudo apt-get upgrade
 ```
 - Cài đặt và khởi động apache2:
 ```bash
-sudo apt install apache2
+sudo apt-get install apache2
 sudo systemctl start apache2
 sudo systemctl enable apache2
 ```
 - Cài đặt PHP và những extension cần thiết(ở đây sử dụng phiên bản mới nhất là php8.1)
 ```bash
-sudo apt install php-fpm php-mysql php-curl php-gd php-mbstring php-xml php-xmlrpc
+sudo apt-get install php-fpm php-mysql php-curl php-gd php-mbstring php-xml php-xmlrpc
 ``` 
 - Khởi động lại Apache để tải lại các module của PHP
 ```bash
@@ -47,10 +47,10 @@ sudo systemctl restart apache2
     - Cài đặt MySQL (hoặc MariaDB):
     ```bash
     ## MySQL
-    sudo apt install mysql-server
+    sudo apt-get install mysql-server
 
     ### MariaDB
-    sudo apt install mariadb-server
+    sudo apt-get install mariadb-server
     ```
     - Cài đặt bảo mật cho MySQL(Sử dụng lệnh sau và làm theo các bước ở dưới):
     ```bash
@@ -118,18 +118,18 @@ Nhìn chung, LEMP cung cấp môi trường phát triển web tương tự như 
 # 4. Cài đặt Wordpress sử dụng Nginx trên Ubuntu
 - Cập nhật hệ thống
 ```bash
-sudo apt update
-sudo apt upgrade
+sudo apt-get update
+sudo apt-get upgrade
 ```
 - Cài đặt và khởi động Nginx
 ```bash
-sudo apt install nginx
+sudo apt-get install nginx
 sudo systemctl start nginx
 sudo systemctl enable nginx
 ```
 - Cài đặt PHP và những extension cần thiết(ở đây sử dụng phiên bản mới nhất là php8.1)
 ```bash
-sudo apt install php-fpm php-mysql php-curl php-gd php-mbstring php-xml php-xmlrpc
+sudo apt-get install php-fpm php-mysql php-curl php-gd php-mbstring php-xml php-xmlrpc
 ```
 - Cấu hình PHP-FPM:
     - Mở file cấu hình PHP-FPM:
