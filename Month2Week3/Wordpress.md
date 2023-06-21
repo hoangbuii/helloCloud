@@ -94,6 +94,14 @@ sudo systemctl restart apache2
 
     ```
     - Lưu lại file và thoát
+    - Cài đặt ghi lại module cho Apache
+    ```bash
+    sudo a2enmod rewrite
+    ```
+    - Khởi động lại Apache áp dụng cấu hình
+    ```bash
+    sudo systemctl restart apache2
+    ```
 - Mở trình duyêt, nhập địa chỉ IP của server và cài đặt Wordpress.
     - Đầu tiên, chọn một ngôn ngữ để bắt đầu:
 
