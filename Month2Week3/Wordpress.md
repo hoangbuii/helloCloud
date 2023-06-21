@@ -203,7 +203,7 @@ sudo apt-get install php-fpm php-mysql php-curl php-gd php-mbstring php-xml php-
         }
         location ~ \.php$ {
             include snippets/fastcgi-php.conf;
-            fastcgi_pass unix:/run/php/php7.x-fpm.sock;
+            fastcgi_pass unix:/run/php/php8.1-fpm.sock;
         }
         location ~ /\.ht {
             deny all;
