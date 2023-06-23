@@ -68,7 +68,7 @@ sudo service nginx reload
     - Proxy server cài đặt Ubuntu và chạy NGinX
     - Hai backend Server chạy CentOS và chạy Apache
     - Từ Client truy cập đến proxy server sẽ chuyển tiếp liên kết đến hai backend server dựa vào tên miền
-![noimg](https://github.com/hoangbuii/helloCloud/blob/main/Month2Week3/nginximg/topouse1.png)
+![noimg](https://github.com/hoangbuii/helloCloud/blob/main/Month2Week3/nginximg/topouse2.png)
 - File `index.html` tại *example1.com*(tại *example2.com* tương tự):
 ```html
 <!DOCTYPE html>
