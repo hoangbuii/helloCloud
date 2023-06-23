@@ -228,4 +228,4 @@ Dưới đây là một số thuật toán cân bằng tải thường được 
     - Sau khi cấu hình kết thúc, ta có thể truy cập vào địa chỉ ip của load balancer để truy cập vào các server backend.
 
     ![noimg](https://github.com/hoangbuii/helloCloud/blob/main/Month2Week3/nginximg/p1.png)
-    ![noimg](https://github.com/hoangbuii/helloCloud/blob/main/Month2Week3/nginximg/p1.png)
+    ![noimg](https://github.com/hoangbuii/helloCloud/blob/main/Month2Week3/nginximg/p2.png)
