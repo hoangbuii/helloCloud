@@ -151,3 +151,81 @@ Dưới đây là một số thuật toán cân bằng tải thường được 
 4. Generic Hash: Khóa tùy chỉnh do người dùng xác định được sử dụng để xác định máy chủ phụ trợ. Điều này cho phép kiểm soát nhiều hơn hành vi cân bằng tải vì bất kỳ dữ liệu liên quan nào cũng có thể được sử dụng để đưa ra quyết định định tuyến. 
 5. Least Time: NGINX đo thời gian phản hồi từ các máy chủ phụ trợ và hướng yêu cầu đến máy chủ có thời gian phản hồi nhanh nhất. Thuật toán này rất hữu ích khi thời gian phản hồi là một yếu tố quan trọng. 
 6. Ngẫu nhiên: Các yêu cầu được phân phối ngẫu nhiên giữa các máy chủ phụ trợ, điều này có thể hiệu quả đối với một số tình huống nhất định khi không cần thiết phải phân phối đồng đều.
+
+- Để cấu hình một máy chủ sử dụng NGINX làm load balancer, phân chia tải đến các máy khác ta thực hiện theo các bước sau:
+    - Chuẩn bị máy chủ NGINX làm load balancer, các máy chủ backend:
+
+    ![noimg](https://github.com/hoangbuii/helloCloud/blob/main/Month2Week3/nginximg/topo2.png)
+    - Cấu hình các máy chủ backend:
+    - Cấu hình load balancer: Truy cập vào file `/etc/nginx/nginx.conf` để cấu hình load balancer
+    ```bash
+    sudo nano /etc/nginx/nginx.conf
+    ```
+    - Đặt các server backends: các backend server được đặt tại khối `http` và chỉ định thuật toán hỗ trợ phân chia tải 
+        - Round Robin (Mặc định):
+        ```conf
+        upstream backend {
+            #Round Robin
+            server 192.168.68.214;
+            server 192.168.68.232;
+        }
+        ```
+        - Least Connection:
+        ```conf
+        upstream backend {
+            server 192.168.68.214;
+            server 192.168.68.232;
+
+            # Least Connection
+            least_conn;
+        }
+        ```
+        - IP hash:
+        ```conf
+        upstream backend {
+            server 192.168.68.214;
+            server 192.168.68.232;
+
+            # IP Hash
+            ip_hash;
+        }
+        ```
+        - Least Time(yêu cầu NGINX plus):
+        ```conf
+        upstream backend {
+            server 192.168.68.214;
+            server 192.168.68.232;
+
+            # Least Time (NGINX Plus required)
+            least_time header upstream_response_time;
+        }
+        ```
+        - Phân chia theo trọng số:
+        ```conf
+        upstream backend {
+            server 192.168.68.214 weight=6;
+            server 192.168.68.232 weight=4;
+        }
+        ```
+        Việc phân chia trên có ngĩa là 60% kết nối sẽ truy cập vào backend server đầu tiên và 40% kết nối sẽ truy cập vào backend server thứ 2
+        - Ngẫu nhiên:
+        ```conf
+        upstream backend {
+            server 192.168.68.214;
+            server 192.168.68.232;
+
+            # Random
+            random;
+        }
+        ```
+    - Thêm khối `location` để chuyển hướng đến các backend server
+    ```conf
+    location / {
+        proxy_pass http://backend;
+        proxy_set_header Host $host;
+    }
+    ```
+    - Sau khi cấu hình kết thúc, ta có thể truy cập vào địa chỉ ip của load balancer để truy cập vào các server backend.
+
+    ![noimg](https://github.com/hoangbuii/helloCloud/blob/main/Month2Week3/nginximg/p1.png)
+    ![noimg](https://github.com/hoangbuii/helloCloud/blob/main/Month2Week3/nginximg/p1.png)
