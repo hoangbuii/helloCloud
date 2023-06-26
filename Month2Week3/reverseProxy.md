@@ -268,7 +268,7 @@ HA (High Availability) đề cập đến một hệ thống hoặc thiết lậ
 - Cấu hình Reverse proxy server:
     - Truy cập file cấu hình của NGinX
     ```bash
-
+    sudo nano /etc/nginx/nginx.conf
     ```
     - Thêm khối các backend server(xem thêm các thuật toán tại [Explain NGinX](https://github.com/hoangbuii/helloCloud/blob/main/Month2Week3/NGinX.md)):
     ```conf
