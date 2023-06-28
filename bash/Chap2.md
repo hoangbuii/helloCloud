@@ -73,6 +73,33 @@ file3.txt  subdirectory
 ./directory1/subdirectory:
 file4.txt
 ```
+### 1.3.1 tree
+Trong Bash, bạn có thể sử dụng `tree` để hiển thị biểu diễn đồ họa của cấu trúc thư mục trên hệ thống của mình. Tuy nhiên, treelệnh này không có sẵn theo mặc định trên tất cả các hệ thống, vì vậy bạn có thể cần phải cài đặt nó trước:
+- Đối với Ubuntu
+```bash
+$ sudo apt-get install tree
+```
+- Đối với CentOS
+```bash
+$ sudo yum install tree
+```
+Sau khi cài đặt, bạn có thể hiển thị các thư mục và file của thư mục hiện tại:
+```bash
+$ tree
+.
+└── example
+    ├── animals.txt
+    └── dogs.txt.gz
+
+1 directory, 2 files
+```
+treecung cấp các tùy chọn khác nhau để tùy chỉnh đầu ra. Một số tùy chọn thường được sử dụng bao gồm:
+- `-L` (level): Giới hạn độ sâu của cây ở mức quy định.
+- `-a`: Hiển thị các tập tin và thư mục ẩn.
+- `-d`: Chỉ hiển thị các thư mục, bỏ qua các tập tin.
+- `-f`: In tiền tố đường dẫn đầy đủ cho mỗi tệp.
+- `-I` (pattern): Loại trừ các tệp và thư mục khớp với mẫu.
+
 ## 1.4. mkdir
 `mkdir` dùng để tạo một thư mục mới tại thư mục hiện tại
 ```bash
