@@ -1,3 +1,19 @@
+## Contents
+- [1. Navigating directories](#1-navigating-directories)
+    - [1.1. pwd](#11-pwd)
+    - [1.2. cd](#12-cd)
+    - [1.3. ls](#13-ls)
+        - [1.3.1. tree](#131-tree)
+    - [1.4. mkdir](#14-mkdir)
+    - [1.5. rmdir](#15-rmdir)
+    - [1.6. rm](#16-rm)
+- [2. Thao tác với tệp](#2-thao-tác-với-tệp)
+    - [2.1. cat và tac](#21-cat-và-tac)
+    - [2.2. less và more](#22-less-và-more)
+    - [2.3. grep](#23-grep)
+    - [2.4. tr](#24-tr)
+    - [2.5. alias](#25-alias)
+    - [2.6. gzip và gunzip](#26-gzip-và-gunzip)
 # Chapter II: Làm việc với file và thư mục
 # 1. Navigating directories
 ## 1.1. pwd
@@ -273,7 +289,7 @@ $ alias ll='ls -al'
 
 $ ll
 ```
-## gzip và gunzip
+## 2.6 gzip và gunzip
 `gzip` là một tiện ích nén được sử dụng để nén các tệp. Nó thay thế tệp gốc bằng phiên bản nén có phần mở rộng là ".gz". `gunzip` được sử dụng để giải nén các tệp nén này.
 ```bash
 $ gzip file.txt
