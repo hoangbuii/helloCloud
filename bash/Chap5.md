@@ -136,6 +136,7 @@ if condition1
 then
     # Code to execute if the condition1 is true
 elif condition2
+then
     # Code to execute if the condition2 is true
 else
     # Code to execute if condition1 and condition2 are false

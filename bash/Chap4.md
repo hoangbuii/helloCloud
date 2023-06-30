@@ -46,7 +46,7 @@ PI: 3.14159
 ## 1.5. Biến toàn cục và biến cục bộ
 - Biến toàn cục: Các biến toàn cục được xác định bên ngoài bất kỳ chức năng hoặc khối nào trong tập lệnh của bạn, giúp chúng có thể truy cập được từ bất kỳ đâu trong tập lệnh. Khi một biến toàn cục được khai báo, nó có thể được truy cập và sửa đổi bởi bất kỳ phần nào của tập lệnh.
 
-- Biến cục bộ được khai báo và chỉ có thể truy cập trong một hàm hoặc khối cụ thể. Chúng không thể truy cập được bên ngoài chức năng hoặc khối đó. Biến cục bộ hữu ích khi bạn muốn giới hạn phạm vi của biến trong một phần cụ thể trong tập lệnh của mình. Việc đặt một biến là biến cục bộ chỉ cần thêm `local` vào trước khao=i báo biến
+- Biến cục bộ được khai báo và chỉ có thể truy cập trong một hàm hoặc khối cụ thể. Chúng không thể truy cập được bên ngoài chức năng hoặc khối đó. Biến cục bộ hữu ích khi bạn muốn giới hạn phạm vi của biến trong một phần cụ thể trong tập lệnh của mình. Việc đặt một biến là biến cục bộ chỉ cần thêm `local` vào trước khai báo biến
 ```bash
 function greet {
     local name="Hoang"
