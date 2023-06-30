@@ -33,7 +33,7 @@ Comment trong tập lệnh Bash bắt đầu bằng kí tự `#` và được s�
 ## 2.3. Biến (Variable)
 Các biến trong Bash được sử dụng để lưu trữ và thao tác dữ liệu. Chúng có thể chứa nhiều loại giá trị khác nhau, chẳng hạn như chuỗi, số hoặc mảng
 
-Xem thêm tại [Chapter 4: Variable and Array]()
+Xem thêm tại [Chapter 4: Variable and Array](https://github.com/hoangbuii/helloCloud/blob/main/bash/Chap4.md)
 ## 2.4. Nhập và xuất
 Bash cung cấp các cơ chế để đọc đầu vào từ người dùng hoặc từ tệp, cũng như ghi đầu ra vào thiết bị đầu cuối hoặc tệp. Lệnh `read` thường được sử dụng để đọc đầu vào và `echo` được sử dụng cho đầu ra.
 ```bash
@@ -44,7 +44,7 @@ echo "Hello, $name!"
 ## 2.5 Cấu trúc điều kiển và hàm
 Bash hỗ trợ các cấu trúc điều khiển khác nhau, bao gồm câu lệnh if, vòng lặp for, vòng lặp while và câu lệnh case. Các cấu trúc này cho phép phân nhánh và lặp lại có điều kiện trong tập lệnh. Đồng thời, các tập lệnh Bash có thể định nghĩa các hàm, được đặt tên theo các khối mã có thể được gọi và thực thi nhiều lần trong tập lệnh. Các chức năng cho phép sử dụng lại mã và module hóa.
 
-Xem thêm tại [Chapter 5: Control Struct and Function]()
+Xem thêm tại [Chapter 5: Control Struct and Function](https://github.com/hoangbuii/helloCloud/blob/main/bash/Chap5.md)
 # 3. Luồng điều hướng
 ## 3.1. Toán tử điều hướng
 - `>` (output redirection) huyển hướng đầu ra tiêu chuẩn của một lệnh tới một tệp và ghi đè lên tệp nếu nó đã tồn tại.

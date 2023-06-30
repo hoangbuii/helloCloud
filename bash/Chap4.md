@@ -1,4 +1,5 @@
 # Chapter 4: Biến và mảng
+
 # 1. Biến
 ## 1.1. Khai báo biến
 - Biến trong Bash scripting được khai báo bằng cú pháp `variable_name=value`.
@@ -84,7 +85,7 @@ echo "${#fruits[@]}"  # Output: 3
     fruits[3]="grape"
     fruits[4]="mango"
     ```
-    - Bạn cũng có thể nối các phần tử vào một mảng bằng cách sử dụng +=toán tử:
+    - Bạn cũng có thể nối các phần tử vào một mảng bằng cách sử dụng toán tử `+=`:
     ```bash
     fruits+=("kiwi" "pineapple")
     ```
