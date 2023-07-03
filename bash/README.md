@@ -8,3 +8,5 @@
 [Chapter 4: Variable and Array](https://github.com/hoangbuii/helloCloud/blob/main/bash/Chap4.md)
 
 [Chapter 5: Control Struct and Function](https://github.com/hoangbuii/helloCloud/blob/main/bash/Chap5.md)
+
+[Chapter 6: Parameter on Bash](https://github.com/hoangbuii/helloCloud/blob/main/bash/Chap6.md)
