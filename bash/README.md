@@ -10,3 +10,5 @@
 [Chapter 5: Control Struct and Function](https://github.com/hoangbuii/helloCloud/blob/main/bash/Chap5.md)
 
 [Chapter 6: Parameter on Bash](https://github.com/hoangbuii/helloCloud/blob/main/bash/Chap6.md)
+
+[Chapter 7: Advanced File and Directory](https://github.com/hoangbuii/helloCloud/blob/main/bash/Chap7.md)
