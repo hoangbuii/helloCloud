@@ -24,6 +24,26 @@ $ command <<< "input"
 ```bash
 $ grep "error" <<< "An error occurrd on..."
 ```
+## 1.3. Quoting(Dấu nháy)
+- Dấu nháy đơn `''`: tất cả các ký tự trong dấu ngoặc kép được xử lý theo nghĩa đen. Không có mở rộng biến, thay thế lệnh hoặc mở rộng ký tự đại diện.
+```bash
+$ echo 'Hello $USER'
+Hello $USER
+```
+- Dấu nháy kép `""`:cho phép mở rộng biến, thay thế lệnh và một số ký tự thoát nhất định ( `$`, `\`, `!`, và `"`). Tuy nhiên, chúng không bảo toàn giá trị theo nghĩa đen của các ký tự như dấu nháy đơn.
+```bash
+greeting="Hello"
+echo "The greeting is: $greeting"
+```
+Kết quả:
+```bash
+The greeting is: Hello
+```
+- Dấu gạch chéo ngược `\`: được sử dụng để thoát khỏi các ký tự đặc biệt và xử lý chúng theo nghĩa đen.
+```bash
+$ echo "This is a \"quoted\" word."
+This is a "quoted" word.
+```
 # 2. Thay thế quy trình
 - Thay thế quy trình cho phép đầu vào hoặc đầu ra của quy trình được tham chiếu bằng tên tệp
 ```bash

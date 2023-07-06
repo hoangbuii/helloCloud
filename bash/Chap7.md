@@ -81,6 +81,32 @@ $ find /path/to/search -name "*.txt" -o -name "*.sh"
     ./sh/sc1.sh
     ./sh/input.txt
     ```
+## 1.3. Sort
+Có thể cung cấp đầu vào cho lệnh `sort` là đầu ra của một lệnh khác sử dụng toán tử `|` ví dụ:
+```bash
+$ echo -e "c\nb\na" | sort
+a
+b
+c
+```
+Hoặc có thể sắp xếp một tệp:
+```bash
+sort myfile.txt
+ab
+abs
+cd
+```
+`sort` có một số tuỳ chọn như:
+- `-r` hoặc `--reverse`: Sắp xếp các dòng theo thứ tự ngược lại (giảm dần).
+- `-n` hoặc `--numeric-sort`: Sắp xếp các dòng theo số thay vì theo bảng chữ cái.
+- `-f` hoặc `--ignore-case`: Bỏ qua phân biệt chữ hoa chữ thường khi sắp xếp.
+- `-u` hoặc `--unique`: Loại bỏ các dòng trùng lặp, chỉ hiển thị các dòng duy nhất.
+- `-k <start>,<end>` hoặc `--key=<start>,<end>`: Chỉ định một phạm vi khóa để sắp xếp dựa trên các trường cụ thể trong mỗi dòng.   
+Có thể chỉ định đầu ra của `sort` bằng một file
+```bash
+sort myfile.txt > sorted.txt
+```  
+Lệnh trên sẽ xắp xếp `myfile.txt` và lưu kết quả vào `sorted.txt`
 # 2. Sourcing
 - Khi Sourcing một file bash script, tất cả các biến, alias, hàm sẽ của script đó sẽ tồn tại trong suốt phiên của shell. Sử dụng lênh `source` hoặc `.`
 ```bash
