@@ -241,3 +241,8 @@ fi
 result=$((param1 + param2))
 echo "Result: $result"
 ```
+
+Tài liệu tham khảo:
+- [Shell Parameter](https://www.gnu.org/software/bash/manual/html_node/Shell-Parameters.html)
+- [Shell Parameter Expansion](https://www.gnu.org/software/bash/manual/html_node/Shell-Parameter-Expansion.html)
+- [Shell Script](https://www.gnu.org/software/bash/manual/html_node/Shell-Scripts.html)

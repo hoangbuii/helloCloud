@@ -12,3 +12,7 @@
 [Chapter 6: Parameter on Bash](https://github.com/hoangbuii/helloCloud/blob/main/bash/Chap6.md)
 
 [Chapter 7: Advanced File and Directory](https://github.com/hoangbuii/helloCloud/blob/main/bash/Chap7.md)
+
+[Chapter 8: Redirection](https://github.com/hoangbuii/helloCloud/blob/main/bash/Chap8.md)
+
+[Chapter 9: Conditional Expressions](https://github.com/hoangbuii/helloCloud/blob/main/bash/Chap9.md)
