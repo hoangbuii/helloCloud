@@ -66,7 +66,6 @@ done
 Ví dụ:
 ```bash
 #!/bin/bash
-
 while getopts "a:b:c:" option
 do
     case $option in

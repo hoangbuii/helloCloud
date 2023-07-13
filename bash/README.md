@@ -16,3 +16,10 @@
 [Chapter 8: Redirection](https://github.com/hoangbuii/helloCloud/blob/main/bash/Chap8.md)
 
 [Chapter 9: Conditional Expressions](https://github.com/hoangbuii/helloCloud/blob/main/bash/Chap9.md)
+
+[Chapter 10: Avanced for Agrument](https://github.com/hoangbuii/helloCloud/blob/main/bash/Chap10.md)
+
+[Chapter 11: Debugging](https://github.com/hoangbuii/helloCloud/blob/main/bash/Chap11.md)
+
+[Chapter 12: Excution on Bash](https://github.com/hoangbuii/helloCloud/blob/main/bash/Chap12.md)
+
