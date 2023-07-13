@@ -1,5 +1,31 @@
 # Chapter 12: Thực thi lệnh trong bash
 # 1. Trình thực thi tệp
+## 1.1. Tệp .profile
+`~/.bash_profile` là một tập lệnh được thực thi khi bạn khởi động shell. Nó cho phép bạn tùy chỉnh môi trường Bash của mình bằng cách đặt các [biến môi trường](https://github.com/hoangbuii/helloCloud/blob/main/bash/Chap10.md#3-các-biến-nội-bộ-trong-bash), xác định bí danh và chạy các tập lệnh hoặc lệnh khác.
+```bash
+# if running bash
+if [ -n "$BASH_VERSION" ]; then
+    # include .bashrc if it exists
+    if [ -f "$HOME/.bashrc" ]; then
+        . "$HOME/.bashrc"
+    fi
+fi
+
+# set PATH so it includes user's private bin if it exists
+if [ -d "$HOME/bin" ] ; then
+    PATH="$HOME/bin:$PATH"
+fi
+
+# set PATH so it includes user's private bin if it exists
+if [ -d "$HOME/.local/bin" ] ; then
+    PATH="$HOME/.local/bin:$PATH"
+fi
+```
+## 1.2. .profile và .bash_profile(và .bash_login)
+Trong Bash, các tệp `.bash_profile` và `.bash_login` phục vụ các mục đích tương tự và được sử dụng để khởi tạo login shell. Tuy nhiên, chúng thường không được sử dụng cùng nhau.
+- Nếu `.bash_profile` tồn tại, nó được thực thi.
+- Nếu `.bash_profile` không tồn tại, nhưng `.bash_login`tồn tại, nó được thực thi.
+- Nếu `.bash_profile` hoặc `.bash_login` không tồn tại, nhưng `.profile` tồn tại, nó được thực thi.
 # 2. Tách tệp
 ## 2.1. Sử dụng split
 Lệnh `split` dùng để chia một tệp ra thành nhiều tệp nhỏ hơn dựa trên các tiêu chí được chỉ định
