@@ -35,6 +35,7 @@
     - Cách ly hạn chế: Mặc dù các bộ chứa cung cấp khả năng cách ly ở cấp không gian người dùng, nhưng chúng không bị cô lập như VM.
     - Mối quan tâm về bảo mật: Trong một số trường hợp, tài nguyên hạt nhân được chia sẻ có thể bị khai thác nếu các biện pháp bảo mật không được triển khai đúng cách.
 - Giải pháp: sử dụng Container trên Virtual machine
+
 ![noimg](./img/containeronVM.png)
 # 2. Virtualization
 - Ảo hóa được hiểu một cách đơn giản là chạy nhiều máy chủ ảo trên hạ tầng một máy chủ vật lý. Trên mỗi máy ảo có hệ điều hành riêng giống như một máy chủ thật và được triển khai các môi trường, ứng dụng khác nhau để phù hợp với hoạt động và mục đích của doanh nghiệp.

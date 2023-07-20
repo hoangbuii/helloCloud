@@ -18,7 +18,7 @@
 # Chapter III: Linux install config HTTP
 ## 3.1. [LAMP & LEMP stack, Wordpress installation](./Month2Week3/Wordpress.md)
 - [LAMP stack](./Month2Week3/Wordpress.md#1-lamp)
-- [Install Wordpress using Httpd on Ubuntu](./Month2Week3/Wordpress.md#2-cài-đặt-wordpress-sử-dụng-apache-trên-ubuntu)
+- [Install Wordpress using Apache2 on Ubuntu](./Month2Week3/Wordpress.md#2-cài-đặt-wordpress-sử-dụng-apache-trên-ubuntu)
 - [LEMP stack](./Month2Week3/Wordpress.md#3-lemp)
 - [Install Wordpress using NginX on Ubuntu](./Month2Week3/Wordpress.md#4-cài-đặt-wordpress-sử-dụng-nginx-trên-ubuntu)
 ## 3.2. [NGinX Explaination](./Month2Week3/NGinX.md)
@@ -80,3 +80,41 @@
 - [Thực hiện job tại thời điểm](./bash/Chap12.md#4-thực-hiện-job-tại-thời-điểm)
 - [Keyword](./bash/Chap12.md#5-key-word)
 - [Eval](./bash/Chap12.md#5-key-word)
+# Chapter V: KVM virtualization
+## 5.1. [Introduction](./KVM/intro.md)
+- [Bare metal, Virtual Machines and Containers Concept](./KVM/intro.md#1-bare-metal-virtual-machines-containers-concepts)
+- [Virtualization](./KVM/intro.md#2-virtualization)
+- [Ring](./KVM/intro.md#3-ring)
+- [Type of Virtualization](./KVM/intro.md/#4-type-of-virtualization)
+- [Hypervisor](./KVM/intro.md#5-hypervisor)
+## 5.2. Install KVM
+- Overview of KVM
+- Install on CentOS
+- Install on Ubuntu
+## 5.3. Creating VM
+- virt command
+- Live Mirgate on KVM
+- Access VM by Console
+## 5.4. Working with VM
+- Working with VM
+- Create and manage VM by Virt-Manager
+## 5.5. Networking on VM
+- Network model on KVM
+- TCPDump
+- Bridge
+## 5.6. Storage
+- Thin-Thick mechanism
+- Image file on KVM
+- Add disk, NIC to VM
+## 5.7. Data of VM
+- File data of VM
+- Template
+- Snapshot
+## 5.8. XML for VM
+- XML file
+- Components of domain XML
+- Creating VM with XML
+- Creating Virtual-network with XML
+## 5.9. Webvirtcloud
+- Install webvirtcloud
+- Using webvirtcloud
