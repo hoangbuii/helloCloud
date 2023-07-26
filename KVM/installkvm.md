@@ -23,7 +23,7 @@ Nếu giá trị trả về là 0 chứng tỏ rằng CPU không hỗ trợ ảo
 - Cài đặt KVM trên máy ảo sử dụng VMware được cài trên Window, vì thế trước hết cần tắt một số tính năng của Windows:
     - Hyper-V: chạy cmd dưới quyền admin và chạy lệnh sau
     ```cmd
-    > bcdedit /set hypervisorlaunchtype on
+    > bcdedit /set hypervisorlaunchtype off
     ```
     sau đo restart lại máy và kiểm tra lại
     - Nếu bạn sử dụng Windows 11, hãy tắt tính năng memmory integrity theo các bước dưới đây
@@ -32,4 +32,48 @@ Nếu giá trị trả về là 0 chứng tỏ rằng CPU không hỗ trợ ảo
         - Tắt tính năng **Memory integrity** 
         ![noimg](./img/memiso.png)
 # 2. Install KVM on CentOS 7
+- Cài đặt các gói cần thiết:
+```bash
+sudo yum -y install qemu-kvm libvirt bridge-utils virt-manager
+```
+Trong đó 
+- Kiểm tra các gói đã cài bằng lệnh:
+```bash
+$ lsmod | grep kvm
+kvm_intel             188793  0
+kvm                   653928  1 kvm_intel
+irqbypass              13503  1 kvm
+```
+- Chạy dịch vụ KVM và cho phép chạy cùng hệ thống:
+```bash
+sudo systemctl start libvirtd
+sudo systemctl enable libvirtd
+```
+- Cài công cụ đồ hoạ virt-manager:
+```bash
+sudo yum install -y "@X Window System" xorg-x11-xauth xorg-x11-fonts-* xorg-x11-utils
+```
+- Kiểm tra công cụ đồ hoạ đã được cài đặt:
+```bash
+virt-manager
+```
+- Lưu ý nếu bạn gặp lỗi không thể kết nối đến server, hãy cài đặt openssh-askpass:
+```bash
+sudo yum install openssh-askpass
+```
+![noimg](./img/virthome.png)
 # 3. Install KVM on Ubuntu
+- Cài đặt các gói cần thiết
+```bash
+sudo apt-get install qemu-kvm libvirt-daemon-system libvirt-clients bridge-utils
+```
+- Kiểm tra các gói được cài đặt:
+```bash
+$ lsmod | grep kvm
+kvm_intel             438272  0
+kvm                  1138688  1 kvm_intel
+```
+- Cài đặt công cụ đồ hoạ virt-manager (kiểm tra lại bằng cách truy cập giống bên trên):
+```bash
+sudo apt-get install virt-manager
+```

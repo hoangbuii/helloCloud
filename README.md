@@ -87,15 +87,15 @@
 - [Ring](./KVM/intro.md#3-ring)
 - [Type of Virtualization](./KVM/intro.md/#4-type-of-virtualization)
 - [Hypervisor](./KVM/intro.md#5-hypervisor)
-## 5.2. Install KVM
-- Overview of KVM
-- Install on CentOS
-- Install on Ubuntu
+## 5.2. [Install KVM](./KVM/installkvm.md)
+- [Overview of KVM](./KVM/installkvm.md#1-what-is-kvm)
+- [Install on CentOS](./KVM/installkvm.md#2-install-kvm-on-centos-7)
+- [Install on Ubuntu](./KVM/installkvm.md#3-install-kvm-on-ubuntu)
 ## 5.3. Creating VM
-- virt command
+- virsh command
 - Live Mirgate on KVM
-- Access VM by Console
 ## 5.4. Working with VM
+- Access VM by Console
 - Working with VM
 - Create and manage VM by Virt-Manager
 ## 5.5. Networking on VM
