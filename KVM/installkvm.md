@@ -1,5 +1,5 @@
 >KVM
-# KVM Installation
+# Chapter 2: KVM Installation
 # 1. What is KVM?
 - **KVM (kernel-base Virtual Machine)** là công nghệ ảo hóa nguồn mở cho phép bạn tạo và quản lý nhiều máy ảo (VM) trên hệ thống dựa trên Linux. Nó cho phép bạn chạy đồng thời nhiều hệ điều hành khách, chẳng hạn như Linux, Windows, macOS và các hệ điều hành khác trên một máy chủ vật lý. KVM là một phần của nhân Linux, giúp nó có hiệu quả cao và được tích hợp chặt chẽ với hệ điều hành.
 
@@ -59,7 +59,7 @@ virt-manager
 ```
 - Lưu ý nếu bạn gặp lỗi không thể kết nối đến server, hãy cài đặt openssh-askpass:
 ```bash
-sudo yum install openssh-askpass
+sudo yum install -y openssh-askpass
 ```
 ![noimg](./img/virthome.png)
 # 3. Install KVM on Ubuntu
